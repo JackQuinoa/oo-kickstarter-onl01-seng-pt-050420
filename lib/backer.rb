@@ -9,7 +9,7 @@ class Backer
   
   def back_project(project)
     @backed_projects << project
-    Project.all.select {|project| project.backers == self ? @backers << self :<< self }
+    Project.all.select {|project| project.backers == self ? @backers << self : self }
   end
   
   
